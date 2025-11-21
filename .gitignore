@@ -1,0 +1,165 @@
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+ 
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+x86_64/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+[Bb]in/
+[Oo]bj/
+[Bb]uild/
+[Cc]ache/
+[Ll]og/
+ 
+# Generated build files
+*.idb
+*.pdb
+*.opendb
+*.tlog
+*.lastbuildstate
+*.unsuccessfulbuild
+*.sbr
+*.ilk
+*.iobj
+*.ipdb
+*.rsp
+ 
+# C++ compiler intermediate files
+*.obj
+*.o
+*.lo
+*.la
+*.slo
+*.gch
+*.pch
+*.pchi
+*.tmp
+*.tmp_proj
+ 
+# Precompiled header files
+*.pch
+*.pchi
+ 
+# Precompiled Qt files
+*.moc
+moc_*.cpp
+qrc_*.cpp
+ui_*.h
+ 
+# VS Code model database
+.vscode/
+.vscode/ipch/
+ 
+# IntelliSense
+.ipch/
+*.sdf
+*.cachefile
+*.VC.db
+*.VC.opendb
+ 
+# Clang, GCC, and other tools
+*.d
+*.elf
+*.map
+ 
+# Build system folders
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+Makefile.in
+out/
+build/
+ 
+# Visual Studio folders
+.vs/
+ 
+# Installer/build output
+*.msi
+*.msm
+*.msp
+ 
+# Crash dumps
+*.dmp
+ 
+# Profiling
+*.psess
+*.vsp
+*.vspx
+ 
+# NuGet Packages
+*.nupkg
+packages/
+# Uncomment if you don't want NuGet packages committed
+# /packages/
+ 
+# Test results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+ 
+# Logs
+*.log
+ 
+# Temporary files
+*.tmp
+*.temp
+*.cache
+*.dat
+ 
+# Auto-generated files
+*.manifest
+*_i.c
+*_p.c
+*.tlb
+*.tli
+*.tlh
+ 
+# Windows thumbnail caches
+Thumbs.db
+ehthumbs.db
+ 
+# Generated documentation
+docs/html/
+docs/xml/
+ 
+# Other IDEs
+.idea/
+*.iml
+ 
+# Boost build artifacts
+boost-build/
+bjam.log
+ 
+# Unreal Engine (if using C++ inside UE)
+*.generated.h
+*.generated.cpp
+Saved/
+Intermediate/
+DerivedDataCache/
+ 
+# Qt Creator (optional)
+*.pro.user
+*.qbs.user
+*.qm
+*.qrc
+ 
+# vcpkg
+installed/
+vcpkg_installed/
+packages/
+buildtrees/
+ 
+# Conan package manager
+conanbuildinfo.*
+conaninfo.txt
+.conan/
