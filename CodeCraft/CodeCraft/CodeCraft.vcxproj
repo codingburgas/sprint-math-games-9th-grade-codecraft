@@ -123,7 +123,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CodeCraft.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\mainMenu.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\mainMenu.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
