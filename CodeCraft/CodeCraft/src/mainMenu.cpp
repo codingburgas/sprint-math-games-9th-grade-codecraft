@@ -2,6 +2,8 @@
 #include <string>
 #include <windows.h>
 #include <conio.h>
+#include"../include/mainMenu.h"
+#include"../include/startGame.h"
 using namespace std;
 
 void clearScreen() {
@@ -116,13 +118,6 @@ void showInstructions() {
     clearScreen();
     drawDots();
     printCenteredAt("Instructions screen...", 5, FOREGROUND_BLUE | FOREGROUND_INTENSITY);
-    system("pause");
-}
-
-void startGame() {
-    clearScreen();
-    drawDots();
-    printCenteredAt("Game starting...", 5, FOREGROUND_BLUE | FOREGROUND_INTENSITY);
     system("pause");
 }
 

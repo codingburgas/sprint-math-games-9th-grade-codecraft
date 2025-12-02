@@ -1,11 +1,12 @@
 #pragma once
 #include <string>
+#include <windows.h>
 
 // Utility functions
 void clearScreen();
 void setCursorPosition(int x, int y);
 void getConsoleSize(int& width, int& height);
-void printCenteredAt(std::string text, int y);
+void printCenteredAt(std::string text, int y, WORD color);
 void displayTitle(int startY);
 
 // Main menu
