@@ -15,4 +15,5 @@ void mainMenu();
 void displayMenu(int selectedOption);
 void showInstructions();
 void showHighScores();
+void showSettings();
 void startGame();

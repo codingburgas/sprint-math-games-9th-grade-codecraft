@@ -68,27 +68,48 @@ void displayTitle(int startY) {
 
 void displayMenu(int selectedOption) {
     clearScreen();
-    drawDots();
 
-    int y = 2;
-    displayTitle(y);
+    int width, height;
+    getConsoleSize(width, height);
 
-    y += 10;
+    // Calculate starting Y position to center vertically
+    int startY = (height - 20) / 2;
+    if (startY < 0) startY = 0;
 
-    const char* options[] = {
-        "Start Game",
-        "Instructions",
-        "Exit"
+    displayTitle(startY);
+    startY += 8;
+
+    // Menu box
+    printCenteredAt("+==================================================+", startY++);
+    printCenteredAt("|                                                  |", startY++);
+    printCenteredAt("|          >>> M A I N   M E N U <<<               |", startY++);
+    printCenteredAt("|                                                  |", startY++);
+    printCenteredAt("+==================================================+", startY++);
+
+    string menuItems[] = {
+        "Begin Your Quest",
+        "How to Play",
+        "Hall of Heroes",
+        "Settings",
+        "Exit to Reality"
     };
 
-    WORD normalColor = FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE;
-    WORD highlightColor = FOREGROUND_GREEN | FOREGROUND_INTENSITY;
+    for (int i = 0; i < 5; i++) {
+        string prefix = (i == selectedOption) ? " >>  " : "     ";
+        string suffix = (i == selectedOption) ? "  << " : "     ";
+        string line = "|" + prefix + menuItems[i];
 
-    for (int i = 0; i < 3; i++) {
-        string line = (i == selectedOption) ? "> " + string(options[i]) + " <" : options[i];
-        WORD color = (i == selectedOption) ? highlightColor : normalColor;
-        printCenteredAt(line, y++, color);
+        // Pad to fit box width
+        while (line.length() < 51) line += " ";
+        line += "|";
+
+        printCenteredAt(line, startY++);
     }
+
+    printCenteredAt("|                                                  |", startY++);
+    printCenteredAt("+==================================================+", startY++);
+    startY += 2;
+    printCenteredAt("Use UP/DOWN arrows | ENTER to select | ESC to exit", startY);
 }
 
 void showInstructions() {
@@ -101,7 +122,21 @@ void showInstructions() {
 void startGame() {
     clearScreen();
     drawDots();
-    printCenteredAt("Game starting...", 5, FOREGROUND_RED | FOREGROUND_INTENSITY);
+    printCenteredAt("Game starting...", 5, FOREGROUND_BLUE | FOREGROUND_INTENSITY);
+    system("pause");
+}
+
+void showHighScores() {
+    clearScreen();
+    drawDots();
+    printCenteredAt("Show HighScores...", 5, FOREGROUND_BLUE | FOREGROUND_INTENSITY);
+    system("pause");
+}
+
+void showSettings() {
+    clearScreen();
+    drawDots();
+    printCenteredAt("Show settings...", 5, FOREGROUND_BLUE | FOREGROUND_INTENSITY);
     system("pause");
 }
 
@@ -119,32 +154,37 @@ void mainMenu() {
 
             if (key == 72) { // up
                 selectedOption--;
-                if (selectedOption < 0) selectedOption = 2;
+                if (selectedOption < 0) selectedOption = 4;
             }
             else if (key == 80) { // down
                 selectedOption++;
-                if (selectedOption > 2) selectedOption = 0;
+                if (selectedOption > 4) selectedOption = 0;
             }
         }
-        else if (key == 13) { // ENTER
+        // Handle ENTER key
+        else if (key == 13) {
             switch (selectedOption) {
-            case 0: startGame(); break;
-            case 1: showInstructions(); break;
+            case 0:
+                startGame();
+                break;
+            case 1:
+                showInstructions();
+                break;
             case 2:
+                showHighScores();
+                break;
+            case 3:
+                showSettings();
+                break;
+            case 4:
                 clearScreen();
-                drawDots();
-                {
-                    int width, height;
-                    getConsoleSize(width, height);
-                    int y = height / 2;
-
-                    WORD magenta = FOREGROUND_RED | FOREGROUND_BLUE | FOREGROUND_INTENSITY;
-
-                    printCenteredAt("+============================================================+", y++, magenta);
-                    printCenteredAt("|   Thank you for saving Numeria, brave Number Weaver!       |", y++, magenta);
-                    printCenteredAt("|   May the Great Equation Stone guide your path!            |", y++, magenta);
-                    printCenteredAt("+============================================================+", y++, magenta);
-                }
+                int width, height;
+                getConsoleSize(width, height);
+                int y = height / 2;
+                printCenteredAt("+============================================================+", y++);
+                printCenteredAt("|   Thank you for saving Numeria, brave Number Weaver!     |", y++);
+                printCenteredAt("|   May the Great Equation Stone guide your path!          |", y++);
+                printCenteredAt("+============================================================+", y++);
                 Sleep(2000);
                 running = false;
                 break;
