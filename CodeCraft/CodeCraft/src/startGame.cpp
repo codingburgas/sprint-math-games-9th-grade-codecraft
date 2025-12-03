@@ -4,6 +4,7 @@
 #include <conio.h>
 #include"../include/startGame.h"
 #include"../include/mainMenu.h"
+#include"../include/firstChapter.h"
 using namespace std;
 
 
@@ -60,4 +61,6 @@ void startGame() {
     startY += 2;
     printCenteredAt("Press any key to accept your destiny...", startY, cyan);
     _getch();
+
+	firstChapter(playerName);
 }
