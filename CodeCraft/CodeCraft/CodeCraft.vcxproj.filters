@@ -24,12 +24,18 @@
     <ClCompile Include="src\startGame.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\leaderBoard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\mainMenu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\startGame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\leaderBoard.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

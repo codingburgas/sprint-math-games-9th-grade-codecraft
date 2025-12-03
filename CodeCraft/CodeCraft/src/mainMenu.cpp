@@ -2,6 +2,7 @@
 #include <string>
 #include <windows.h>
 #include <conio.h>
+#include"../include/leaderBoard.h"
 #include"../include/mainMenu.h"
 #include"../include/startGame.h"
 using namespace std;
@@ -118,13 +119,6 @@ void showInstructions() {
     clearScreen();
     drawDots();
     printCenteredAt("Instructions screen...", 5, FOREGROUND_BLUE | FOREGROUND_INTENSITY);
-    system("pause");
-}
-
-void showHighScores() {
-    clearScreen();
-    drawDots();
-    printCenteredAt("Show HighScores...", 5, FOREGROUND_BLUE | FOREGROUND_INTENSITY);
     system("pause");
 }
 
