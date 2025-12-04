@@ -128,6 +128,7 @@
     <ClCompile Include="src\leaderBoard.cpp" />
     <ClCompile Include="src\mainMenu.cpp" />
     <ClCompile Include="src\secondChapter.cpp" />
+    <ClCompile Include="src\settings.cpp" />
     <ClCompile Include="src\startGame.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -135,6 +136,7 @@
     <ClInclude Include="include\leaderBoard.h" />
     <ClInclude Include="include\mainMenu.h" />
     <ClInclude Include="include\secondChapter.h" />
+    <ClInclude Include="include\settings.h" />
     <ClInclude Include="include\startGame.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

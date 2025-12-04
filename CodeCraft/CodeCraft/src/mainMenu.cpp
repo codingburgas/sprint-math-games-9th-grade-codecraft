@@ -5,6 +5,7 @@
 #include"../include/leaderBoard.h"
 #include"../include/mainMenu.h"
 #include"../include/startGame.h"
+#include "../include/settings.h"
 using namespace std;
 
 void clearScreen() {
@@ -122,12 +123,6 @@ void showInstructions() {
     system("pause");
 }
 
-void showSettings() {
-    clearScreen();
-    drawDots();
-    printCenteredAt("Show settings...", 5, FOREGROUND_BLUE | FOREGROUND_INTENSITY);
-    system("pause");
-}
 
 void mainMenu() {
     int selectedOption = 0;
