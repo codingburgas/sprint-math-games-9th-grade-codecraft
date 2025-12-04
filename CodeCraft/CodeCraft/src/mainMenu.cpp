@@ -6,6 +6,7 @@
 #include"../include/mainMenu.h"
 #include"../include/startGame.h"
 #include "../include/settings.h"
+#include "../include/howToPlay.h"
 using namespace std;
 
 void clearScreen() {
@@ -63,8 +64,8 @@ void displayTitle(int startY) {
     printCenteredAt("##   ##  ##  ##  ##   ##  #####  #####   ####    ###", startY++, cyan);
     printCenteredAt(" ###  ##  ##  ##  ### ###  ##     ##  ##   ##    ## ##", startY++, cyan);
     printCenteredAt("  ## ####  ##  ##  ## # ##  #####  #####    ##   ##   ##", startY++, cyan);
-    printCenteredAt("   ##  ###  ##  ##  ##   ##  ##     ##  ##   ##   #######", startY++, cyan);
-    printCenteredAt("   ##   ##   ####   ##   ##  #####  ##   ## ####  ##   ##", startY++, cyan);
+    printCenteredAt("  ##  ###  ##  ##  ##   ##  ##     ##  ##   ##   #######", startY++, cyan);
+    printCenteredAt("  ##   ##   ####   ##   ##  #####  ##   ## ####  ##   ##", startY++, cyan);
 
     startY++;
     printCenteredAt("~ The Kingdom of Numeria Awaits ~", startY, yellow);
@@ -115,14 +116,6 @@ void displayMenu(int selectedOption) {
     startY += 2;
     printCenteredAt("Use UP/DOWN arrows | ENTER to select | ESC to exit", startY);
 }
-
-void showInstructions() {
-    clearScreen();
-    drawDots();
-    printCenteredAt("Instructions screen...", 5, FOREGROUND_BLUE | FOREGROUND_INTENSITY);
-    system("pause");
-}
-
 
 void mainMenu() {
     int selectedOption = 0;
