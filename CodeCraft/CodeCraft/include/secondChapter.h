@@ -5,6 +5,6 @@ using namespace std;
 extern int stonesCollected;
 
 // Declare the chapter functions
-void firstChapter(const string& playerName);
+void secondChapter(const string& playerName);
 
 void displayStoneProgress(int startY);
