@@ -20,7 +20,40 @@ void fourthChapter(const string& playerName) {
     displayTitle(startY);
     startY += 8;
 
-    
+    // Chapter intro
+    printCenteredAt("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", startY++, yellow);
+    printCenteredAt("[ CHAPTER 4: The Mountain of Multiples ]", startY++, yellow);
+    printCenteredAt("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", startY++, yellow);
+    startY++;
+
+    printCenteredAt("The air grows thin as you ascend the steep slopes.", startY++, yellow);
+    printCenteredAt("Ancient runes glow along the jagged rocks.", startY++, yellow);
+    startY += 2;
+
+    printCenteredAt("Press any key to continue...", startY, yellow);
+    _getch();
+
+    // Puzzle screen
+    clearScreen();
+    startY = (height - 20) / 2;
+    if (startY < 0) startY = 0;
+
+    printCenteredAt("+==========================================================+", startY++, yellow);
+    printCenteredAt("|                 THE ALTAR OF MULTIPLICATION             |", startY++, yellow);
+    printCenteredAt("+==========================================================+", startY++, yellow);
+    startY++;
+
+    printCenteredAt("A glowing stone platform emerges from the mountainside.", startY++, yellow);
+    printCenteredAt("Numbers float above it, awaiting the correct product.", startY++, yellow);
+    startY += 2;
+
+    printCenteredAt("+==========================================================+", startY++, yellow);
+    printCenteredAt("|                    SOLVE THE MULTIPLE                     |", startY++, yellow);
+    printCenteredAt("+==========================================================+", startY++, yellow);
+    startY++;
+
+    printCenteredAt("7 * 5 = ___", startY++, yellow);
+    startY += 2;
 
     // Solve loop
     int answer;
