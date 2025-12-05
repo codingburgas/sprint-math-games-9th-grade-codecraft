@@ -131,6 +131,7 @@
     <ClCompile Include="src\secondChapter.cpp" />
     <ClCompile Include="src\settings.cpp" />
     <ClCompile Include="src\startGame.cpp" />
+    <ClCompile Include="src\thirdChapter.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\firstChapter.h" />
@@ -140,6 +141,7 @@
     <ClInclude Include="include\secondChapter.h" />
     <ClInclude Include="include\settings.h" />
     <ClInclude Include="include\startGame.h" />
+    <ClInclude Include="include\thirdChapter.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

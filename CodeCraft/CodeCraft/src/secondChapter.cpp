@@ -4,6 +4,7 @@
 #include <conio.h>
 #include"../include/mainMenu.h"
 #include"../include/secondChapter.h"
+#include "../include/thirdChapter.h"
 using namespace std;
 
 
@@ -128,12 +129,8 @@ void secondChapter(const string& playerName) {
 
     printCenteredAt("[ Chapter 2 Complete! ]", startY++, cyan);
     startY += 2;
-    printCenteredAt("Press ESC to return to menu...", startY, cyan);
+    printCenteredAt("Press enter to continue your journey...", startY, cyan);
+    _getch();
 
-    while (true) {
-        if (_kbhit()) {
-            int key = _getch();
-            if (key == 27) break;
-        }
-    }
+    thirdChapter(playerName);
 }
