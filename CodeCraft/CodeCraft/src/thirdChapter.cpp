@@ -4,11 +4,13 @@
 #include <conio.h>
 #include "../include/mainMenu.h"
 #include "../include/thirdChapter.h"
+#include "../include/fourthChapter.h"
 using namespace std;
 
 void thirdChapter(const string& playerName) {
 
     WORD green = FOREGROUND_GREEN | FOREGROUND_INTENSITY;
+    WORD cyan = FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY;
 
     clearScreen();
     int width, height;
@@ -127,19 +129,14 @@ void thirdChapter(const string& playerName) {
 
     printCenteredAt("[ THIRD STONE - Fragment of Fractions ]", startY++, green);
     startY += 2;
-
+    
     displayStoneProgress(startY);
     startY += 3;
 
-    printCenteredAt("[ Chapter 3 Complete! ]", startY++, green);
+    printCenteredAt("[ Chapter 3 Complete! ]", startY++, cyan);
     startY += 2;
+    printCenteredAt("Press enter to continue your journey...", startY, cyan);
+    _getch();
 
-    printCenteredAt("Press ESC to return to menu...", startY, green);
-
-    while (true) {
-        if (_kbhit()) {
-            int key = _getch();
-            if (key == 27) break;
-        }
-    }
+    fourthChapter(playerName);
 }
