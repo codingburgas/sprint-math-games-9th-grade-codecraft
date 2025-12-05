@@ -19,6 +19,40 @@ void thirdChapter(const string& playerName) {
     displayTitle(startY);
     startY += 8;
 
+    // Chapter intro
+    printCenteredAt("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", startY++, green);
+    printCenteredAt("[ CHAPTER 3: The Forest of Fractions ]", startY++, green);
+    printCenteredAt("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", startY++, green);
+    startY++;
+
+    printCenteredAt("Thick mist rolls between ancient trees.", startY++, green);
+    printCenteredAt("Whispers of broken numbers echo through the forest.", startY++, green);
+    startY += 2;
+
+    printCenteredAt("Press any key to continue...", startY, green);
+    _getch();
+
+    // Puzzle screen
+    clearScreen();
+    startY = (height - 20) / 2;
+    if (startY < 0) startY = 0;
+
+    printCenteredAt("+==========================================================+", startY++, green);
+    printCenteredAt("|               THE SHRINE OF FRACTION FLOW                |", startY++, green);
+    printCenteredAt("+==========================================================+", startY++, green);
+    startY++;
+
+    printCenteredAt("A glowing stone altar rises from the forest floor.", startY++, green);
+    printCenteredAt("Symbols swirl above it, forming a fractured equation.", startY++, green);
+    startY += 2;
+
+    printCenteredAt("+==========================================================+", startY++, green);
+    printCenteredAt("|                     COMPLETE THE FLOW                     |", startY++, green);
+    printCenteredAt("+==========================================================+", startY++, green);
+    startY++;
+
+    printCenteredAt("1/2 + 1/4 = ___", startY++, green);
+    startY += 2;
 
     // Solve loop
     double answer;
