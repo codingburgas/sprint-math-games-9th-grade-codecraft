@@ -21,6 +21,41 @@ void fifthChapter(const string& playerName) {
     displayTitle(startY);
     startY += 8;
 
+    // Chapter intro
+    printCenteredAt("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", startY++, cyan);
+    printCenteredAt("[ CHAPTER 5: The Cavern of Division ]", startY++, cyan);
+    printCenteredAt("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", startY++, cyan);
+    startY++;
+
+    printCenteredAt("The sound of dripping water echoes in the darkness.", startY++, cyan);
+    printCenteredAt("Faint blue symbols pulse along the cavern walls.", startY++, cyan);
+    startY += 2;
+
+    printCenteredAt("Press any key to continue...", startY, cyan);
+    _getch();
+
+    // Puzzle screen
+    clearScreen();
+    startY = (height - 20) / 2;
+    if (startY < 0) startY = 0;
+
+    printCenteredAt("+==========================================================+", startY++, cyan);
+    printCenteredAt("|                 THE DIVIDING CRYSTAL ALTAR               |", startY++, cyan);
+    printCenteredAt("+==========================================================+", startY++, cyan);
+    startY++;
+
+    printCenteredAt("A crystalline monolith hums with ancient energy.", startY++, cyan);
+    printCenteredAt("Its surface cracks open, revealing a glowing equation.", startY++, cyan);
+    startY += 2;
+
+    printCenteredAt("+==========================================================+", startY++, cyan);
+    printCenteredAt("|                    SOLVE THE DIVISION                     |", startY++, cyan);
+    printCenteredAt("+==========================================================+", startY++, cyan);
+    startY++;
+
+    printCenteredAt("42 / 6 = ___", startY++, cyan);
+    startY += 2;
+
     // Solve loop
     int answer;
     int attempts = 0;
