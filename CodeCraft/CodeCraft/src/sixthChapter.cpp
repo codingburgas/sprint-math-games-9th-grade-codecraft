@@ -23,7 +23,40 @@ void sixthChapter(const string& playerName) {
     displayTitle(startY);
     startY += 8;
 
-    
+    // Chapter intro
+    printCenteredAt("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", startY++, cyan);
+    printCenteredAt("[ CHAPTER 6: The Final Equation Gate ]", startY++, magenta);
+    printCenteredAt("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", startY++, cyan);
+    startY++;
+
+    printCenteredAt("You enter a vast chamber of shifting numbers.", startY++, green);
+    printCenteredAt("The Final Gate towers ahead, sealed by a complex equation.", startY++, green);
+    startY += 2;
+
+    printCenteredAt("Press enter to continue...", startY, yellow);
+    _getch();
+
+    // Puzzle screen
+    clearScreen();
+    startY = (height - 20) / 2;
+    if (startY < 0) startY = 0;
+
+    printCenteredAt("+==========================================================+", startY++, cyan);
+    printCenteredAt("|                   THE FINAL EQUATION GATE                |", startY++, magenta);
+    printCenteredAt("+==========================================================+", startY++, cyan);
+    startY++;
+
+    printCenteredAt("The air shimmers as the ultimate equation appears.", startY++, green);
+    printCenteredAt("Only perfect mastery can unlock the gate.", startY++, green);
+    startY += 2;
+
+    printCenteredAt("+==========================================================+", startY++, cyan);
+    printCenteredAt("|                     SOLVE THE EQUATION                    |", startY++, magenta);
+    printCenteredAt("+==========================================================+", startY++, cyan);
+    startY++;
+
+    printCenteredAt("(8 + 4) * 2 - 6 = ___", startY++, yellow);
+    startY += 2;
 
     // Solve loop
     int answer;
