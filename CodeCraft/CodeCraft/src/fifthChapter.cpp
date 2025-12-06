@@ -6,11 +6,17 @@
 #include "../include/fifthChapter.h"
 #include "../include/sixthChapter.h"
 
+
 using namespace std;
 
 void fifthChapter(const string& playerName) {
 
     WORD cyan = FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY;
+    WORD red = FOREGROUND_RED | FOREGROUND_INTENSITY;
+    WORD green = FOREGROUND_GREEN | FOREGROUND_INTENSITY;
+    WORD yellow = FOREGROUND_RED | FOREGROUND_BLUE | FOREGROUND_INTENSITY;
+    WORD blue = FOREGROUND_BLUE | FOREGROUND_INTENSITY;
+    WORD purple = FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY;
 
     clearScreen();
     int width, height;
@@ -23,15 +29,15 @@ void fifthChapter(const string& playerName) {
 
     // Chapter intro
     printCenteredAt("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", startY++, cyan);
-    printCenteredAt("[ CHAPTER 5: The Cavern of Division ]", startY++, cyan);
+    printCenteredAt("[ CHAPTER 5: The Cavern of Division ]", startY++, red);
     printCenteredAt("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", startY++, cyan);
     startY++;
 
-    printCenteredAt("The sound of dripping water echoes in the darkness.", startY++, cyan);
-    printCenteredAt("Faint blue symbols pulse along the cavern walls.", startY++, cyan);
+    printCenteredAt("The sound of dripping water echoes in the darkness.", startY++, yellow);
+    printCenteredAt("Faint blue symbols pulse along the cavern walls.", startY++, yellow);
     startY += 2;
 
-    printCenteredAt("Press any key to continue...", startY, cyan);
+    printCenteredAt("Press any key to continue...", startY, green);
     _getch();
 
     // Puzzle screen
@@ -44,8 +50,8 @@ void fifthChapter(const string& playerName) {
     printCenteredAt("+==========================================================+", startY++, cyan);
     startY++;
 
-    printCenteredAt("A crystalline monolith hums with ancient energy.", startY++, cyan);
-    printCenteredAt("Its surface cracks open, revealing a glowing equation.", startY++, cyan);
+    printCenteredAt("A crystalline monolith hums with ancient energy.", startY++, purple);
+    printCenteredAt("Its surface cracks open, revealing a glowing equation.", startY++, purple);
     startY += 2;
 
     printCenteredAt("+==========================================================+", startY++, cyan);
@@ -53,7 +59,7 @@ void fifthChapter(const string& playerName) {
     printCenteredAt("+==========================================================+", startY++, cyan);
     startY++;
 
-    printCenteredAt("42 / 6 = ___", startY++, cyan);
+    printCenteredAt("42 / 6 = ___", startY++, yellow);
     startY += 2;
 
     // Solve loop
@@ -63,7 +69,7 @@ void fifthChapter(const string& playerName) {
 
     while (!solved && attempts < 3) {
 
-        printCenteredAt("Enter your answer: ", startY, cyan);
+        printCenteredAt("Enter your answer: ", startY, yellow);
         int inputX = (width + 19) / 2;
         setCursorPosition(inputX, startY);
 
@@ -78,19 +84,19 @@ void fifthChapter(const string& playerName) {
             printCenteredAt("Light floods the cavern, revealing hidden pathways.", startY++, cyan);
             startY++;
 
-            printCenteredAt("[ 42 / 6 = 7 ]", startY++, cyan);
+            printCenteredAt("[ 42 / 6 = 7 ]", startY++, green);
         }
         else {
             attempts++;
             startY += 2;
 
             if (attempts < 3) {
-                printCenteredAt("The crystal flickers... Incorrect.", startY++, cyan);
-                printCenteredAt("(Attempts remaining: " + to_string(3 - attempts) + ")", startY++, cyan);
+                printCenteredAt("The crystal flickers... Incorrect.", startY++, red);
+                printCenteredAt("(Attempts remaining: " + to_string(3 - attempts) + ")", startY++, red);
                 startY++;
             }
             else {
-                printCenteredAt("The correct answer was 7.", startY++, cyan);
+                printCenteredAt("The correct answer was 7.", startY++, green);
                 printCenteredAt("The crystal stabilizes on its own.", startY++, cyan);
             }
         }
@@ -106,15 +112,15 @@ void fifthChapter(const string& playerName) {
     if (startY < 0) startY = 0;
 
     printCenteredAt("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", startY++, cyan);
-    printCenteredAt("[ The Echoing Core ]", startY++, cyan);
+    printCenteredAt("[ The Echoing Core ]", startY++, green);
     printCenteredAt("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", startY++, cyan);
     startY++;
 
     printCenteredAt("A small glowing shard rises from a pool of blue light.", startY++, cyan);
-    printCenteredAt("It vibrates with the calm precision of division.", startY++, cyan);
+    printCenteredAt("It vibrates with the calm precision of division.", startY++, green);
     startY += 2;
 
-    printCenteredAt("Press any key to claim the stone...", startY, cyan);
+    printCenteredAt("Press any key to claim the stone...", startY, yellow);
     _getch();
 
     // Stone collection screen
@@ -133,7 +139,7 @@ void fifthChapter(const string& playerName) {
     displayStoneProgress(startY);
     startY += 3;
 
-    printCenteredAt("[ Chapter 5 Complete! ]", startY++, cyan);
+    printCenteredAt("[ Chapter 5 Complete! ]", startY++, green);
     startY += 2;
     printCenteredAt("Press enter to continue your journey...", startY++, cyan);
     _getch();
