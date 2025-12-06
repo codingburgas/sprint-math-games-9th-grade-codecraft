@@ -13,7 +13,10 @@ string playerName = "";
 void startGame() {
     clearScreen();
 
+    WORD green = FOREGROUND_GREEN | FOREGROUND_INTENSITY;
     WORD cyan = FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY;
+    WORD yellow = FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY;
+    WORD purple = FOREGROUND_RED | FOREGROUND_BLUE | FOREGROUND_INTENSITY;
 
     int width, height;
     getConsoleSize(width, height);
@@ -25,11 +28,11 @@ void startGame() {
 
     string playerName;
     printCenteredAt("+============================================================+", startY++, cyan);
-    printCenteredAt("|            >>> B E G I N   Y O U R   Q U E S T <<<        |", startY++, cyan);
+    printCenteredAt("|            >>> B E G I N   Y O U R   Q U E S T <<<        |", startY++, yellow);
     printCenteredAt("+============================================================+", startY++, cyan);
     startY += 2;
 
-    printCenteredAt("What is your name, brave Number Weaver? ", startY, cyan);
+    printCenteredAt("What is your name, brave Number Weaver? ", startY, green);
 
     // Position cursor for input
     int inputX = (width + 41) / 2;
@@ -44,22 +47,22 @@ void startGame() {
     startY += 8;
 
     printCenteredAt("+============================================================+", startY++, cyan);
-    printCenteredAt("  Welcome, " + playerName + " the Number Weaver!", startY++, cyan);
+    printCenteredAt("  Welcome, " + playerName + " the Number Weaver!", startY++, yellow);
     printCenteredAt("+============================================================+", startY++, cyan);
 
     startY++;
-    printCenteredAt("The Great Equation Stone calls to you", startY++, cyan);
+    printCenteredAt("The Great Equation Stone calls to you", startY++, green);
 
     startY++;
-    printCenteredAt("Long ago, the Kingdom of Numeria thrived in harmony...", startY++, cyan);
-    printCenteredAt("The Great Equation Stone maintained balance across the realm.", startY++, cyan);
+    printCenteredAt("Long ago, the Kingdom of Numeria thrived in harmony...", startY++, green);
+    printCenteredAt("The Great Equation Stone maintained balance across the realm.", startY++, green);
     printCenteredAt("", startY++, cyan);
-    printCenteredAt("But one dark night, the stone SHATTERED into seven pieces!", startY++, cyan);
-    printCenteredAt("Now chaos spreads: bridges vanish, doors refuse to open,", startY++, cyan);
-    printCenteredAt("and magical creatures are trapped in broken spells.", startY++, cyan);
+    printCenteredAt("But one dark night, the stone SHATTERED into seven pieces!", startY++, green);
+    printCenteredAt("Now chaos spreads: bridges vanish, doors refuse to open,", startY++, green);
+    printCenteredAt("and magical creatures are trapped in broken spells.", startY++, green);
 
     startY += 2;
-    printCenteredAt("Press any key to accept your destiny...", startY, cyan);
+    printCenteredAt("Press enter to accept your destiny...", startY, purple);
     _getch();
 
 	firstChapter(playerName);

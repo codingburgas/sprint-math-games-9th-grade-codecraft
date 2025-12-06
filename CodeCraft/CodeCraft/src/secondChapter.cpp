@@ -11,6 +11,9 @@ using namespace std;
 void secondChapter(const string& playerName) {
 
     WORD cyan = FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY;
+    WORD yellow = FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY;
+    WORD green = FOREGROUND_GREEN | FOREGROUND_INTENSITY;
+    WORD purple = FOREGROUND_RED | FOREGROUND_BLUE | FOREGROUND_INTENSITY;
 
     clearScreen();
     int width, height;
@@ -23,13 +26,13 @@ void secondChapter(const string& playerName) {
 
     // Chapter Introduction
     printCenteredAt("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", startY++, cyan);
-    printCenteredAt("[ CHAPTER 2: The Bridge of Balance ]", startY++, cyan);
+    printCenteredAt("[ CHAPTER 2: The Bridge of Balance ]", startY++, yellow);
     printCenteredAt("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", startY++, cyan);
     startY++;
-    printCenteredAt("A rushing river blocks your path.", startY++, cyan);
-    printCenteredAt("An unstable bridge flickers ahead.", startY++, cyan);
+    printCenteredAt("A rushing river blocks your path.", startY++, green);
+    printCenteredAt("An unstable bridge flickers ahead.", startY++, green);
     startY += 2;
-    printCenteredAt("Press any key to continue...", startY, cyan);
+    printCenteredAt("Press enter to continue...", startY, purple);
     _getch();
 
     // The Scales Puzzle
@@ -38,18 +41,18 @@ void secondChapter(const string& playerName) {
     if (startY < 0) startY = 0;
 
     printCenteredAt("+==========================================================+", startY++, cyan);
-    printCenteredAt("|                 THE SCALES OF EQUALITY                   |", startY++, cyan);
+    printCenteredAt("|                 THE SCALES OF EQUALITY                   |", startY++, yellow);
     printCenteredAt("+==========================================================+", startY++, cyan);
     startY++;
-    printCenteredAt("Two massive golden scales hover at the bridge's center.", startY++, cyan);
+    printCenteredAt("Two massive golden scales hover at the bridge's center.", startY++, green);
     startY += 2;
 
     // Display the puzzle
     printCenteredAt("+==========================================================+", startY++, cyan);
-    printCenteredAt("|                  BALANCE THE SCALES                      |", startY++, cyan);
+    printCenteredAt("|                  BALANCE THE SCALES                      |", startY++, yellow);
     printCenteredAt("+==========================================================+", startY++, cyan);
     startY++;
-    printCenteredAt("4 * 3 = ___ + 6", startY++, cyan);
+    printCenteredAt("4 * 3 = ___ + 6", startY++, yellow);
     startY += 2;
 
     // Puzzle solving loop
@@ -58,7 +61,7 @@ void secondChapter(const string& playerName) {
     bool solved = false;
 
     while (!solved && attempts < 3) {
-        printCenteredAt("Enter your answer: ", startY, cyan);
+        printCenteredAt("Enter your answer: ", startY, purple);
         int inputX = (width + 19) / 2;
         setCursorPosition(inputX, startY);
 
@@ -70,28 +73,28 @@ void secondChapter(const string& playerName) {
             startY += 2;
             printCenteredAt("*** PERFECT BALANCE! ***", startY++, cyan);
             startY++;
-            printCenteredAt("The bridge solidifies with golden light!", startY++, cyan);
+            printCenteredAt("The bridge solidifies with golden light!", startY++, green);
             startY++;
 
-            printCenteredAt("[ 4 * 3 = 6 + 6 = 12 = 12 ]", startY++, cyan);
+            printCenteredAt("[ 4 * 3 = 6 + 6 = 12 = 12 ]", startY++, yellow);
         }
         else {
             attempts++;
             startY += 2;
             if (attempts < 3) {
-                printCenteredAt("The scales shudder... Try again.", startY++, cyan);
-                printCenteredAt("(Attempts remaining: " + to_string(3 - attempts) + ")", startY++, cyan);
+                printCenteredAt("The scales shudder... Try again.", startY++, purple);
+                printCenteredAt("(Attempts remaining: " + to_string(3 - attempts) + ")", startY++, purple);
                 startY++;
             }
             else {
-                printCenteredAt("The correct answer was 6.", startY++, cyan);
-                printCenteredAt("The bridge stabilizes.", startY++, cyan);
+                printCenteredAt("The correct answer was 6.", startY++, green);
+                printCenteredAt("The bridge stabilizes.", startY++, green);
             }
         }
     }
 
     startY += 2;
-    printCenteredAt("Press any key to cross...", startY, cyan);
+    printCenteredAt("Press enter to cross...", startY, purple);
     _getch();
 
     // Finding the Stone
@@ -100,15 +103,15 @@ void secondChapter(const string& playerName) {
     if (startY < 0) startY = 0;
 
     printCenteredAt("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", startY++, cyan);
-    printCenteredAt("[ The Far Side ]", startY++, cyan);
+    printCenteredAt("[ The Far Side ]", startY++, yellow);
     printCenteredAt("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", startY++, cyan);
     startY++;
 
-    printCenteredAt("You cross safely to the other side.", startY++, cyan);
-    printCenteredAt("A glowing fragment is embedded in the keystone.", startY++, cyan);
+    printCenteredAt("You cross safely to the other side.", startY++, green);
+    printCenteredAt("A glowing fragment is embedded in the keystone.", startY++, green);
 
     startY += 2;
-    printCenteredAt("Press any key to claim the stone...", startY, cyan);
+    printCenteredAt("Press enter to claim the stone...", startY, purple);
     _getch();
 
     // Stone Collection
@@ -117,19 +120,19 @@ void secondChapter(const string& playerName) {
     if (startY < 0) startY = 0;
 
     printCenteredAt("+==========================================================+", startY++, cyan);
-    printCenteredAt("|              *** EQUATION STONE OBTAINED ***             |", startY++, cyan);
+    printCenteredAt("|              *** EQUATION STONE OBTAINED ***             |", startY++, yellow);
     printCenteredAt("+==========================================================+", startY++, cyan);
     startY += 2;
 
-    printCenteredAt("[ THE SECOND STONE - Fragment of Multiplication ]", startY++, cyan);
+    printCenteredAt("[ THE SECOND STONE - Fragment of Multiplication ]", startY++, green);
     startY += 2;
 
     displayStoneProgress(startY);
     startY += 3;
 
-    printCenteredAt("[ Chapter 2 Complete! ]", startY++, cyan);
+    printCenteredAt("[ Chapter 2 Complete! ]", startY++, green);
     startY += 2;
-    printCenteredAt("Press enter to continue your journey...", startY, cyan);
+    printCenteredAt("Press enter to continue your journey...", startY, purple);
     _getch();
 
     thirdChapter(playerName);
