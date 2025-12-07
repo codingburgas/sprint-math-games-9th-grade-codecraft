@@ -4,6 +4,7 @@
 #include <conio.h>
 #include "../include/mainMenu.h"
 #include "../include/sixthChapter.h"
+#include "../include/end.h"
 
 using namespace std;
 
@@ -137,20 +138,10 @@ void sixthChapter(const string& playerName) {
     displayStoneProgress(startY);
     startY += 3;
 
-    printCenteredAt("[ Chapter 6 Complete! ]", startY++, green);
+    printCenteredAt("[ Chapter  Complete! ]", startY++, green);
     startY += 2;
+    printCenteredAt("Press enter to continue your journey...", startY++, purple);
+    _getch();
 
-	printCenteredAt("THE END", startY++, red);
-	printCenteredAt("You completed all chapters!", startY++, green);
-    printCenteredAt("Your journey in NUMERIA ended successfully!", startY++, green);
-    startY += 2;
-
-	printCenteredAt("Press ESC to return to menu...", startY, purple);
-
-    while (true) {
-        if (_kbhit()) {
-            int key = _getch();
-            if (key == 27) break;
-        }
-    }
+    endGame(playerName);
 }

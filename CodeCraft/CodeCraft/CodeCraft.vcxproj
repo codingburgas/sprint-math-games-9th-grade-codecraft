@@ -124,6 +124,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\end.cpp" />
     <ClCompile Include="src\fifthChapter.cpp" />
     <ClCompile Include="src\firstChapter.cpp" />
     <ClCompile Include="src\fourthChapter.cpp" />
@@ -137,6 +138,7 @@
     <ClCompile Include="src\thirdChapter.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\end.h" />
     <ClInclude Include="include\fifthChapter.h" />
     <ClInclude Include="include\firstChapter.h" />
     <ClInclude Include="include\fourthChapter.h" />
