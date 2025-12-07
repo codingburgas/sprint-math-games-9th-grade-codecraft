@@ -9,6 +9,11 @@ void showInstructions() {
     clearScreen();
 
     WORD cyan = FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY;
+    WORD yellow = FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY;
+    WORD green = FOREGROUND_GREEN | FOREGROUND_INTENSITY;
+    WORD red = FOREGROUND_RED | FOREGROUND_INTENSITY;
+    WORD blue = FOREGROUND_BLUE | FOREGROUND_INTENSITY;
+    WORD purple = FOREGROUND_RED | FOREGROUND_BLUE | FOREGROUND_INTENSITY;
 
     int width, height;
     getConsoleSize(width, height);
@@ -19,31 +24,28 @@ void showInstructions() {
     startY += 8;
 
     printCenteredAt("+============================================================+", startY++, cyan);
-    printCenteredAt("|              >>> H O W   T O   P L A Y <<<                |", startY++, cyan);
+    printCenteredAt("|              >>> H O W   T O   P L A Y <<<                |", startY++, yellow);
     printCenteredAt("+============================================================+", startY++, cyan);
     startY++;
 
-    printCenteredAt("Welcome to the Kingdom of Numeria!", startY++, cyan);
+    printCenteredAt("Welcome to the Kingdom of Numeria!", startY++, blue);
     startY++;
-    printCenteredAt(">> THE STORY:", startY++, cyan);
-    printCenteredAt("The Great Equation Stone has shattered! Without it,", startY++, cyan);
+    printCenteredAt(">> THE STORY:", startY++, red);
+    printCenteredAt("The Great Equation Stone has shattered! Without it,", startY++, green);
     printCenteredAt("chaos spreads across Numeria. As Ari, a Number Weaver,", startY++, cyan);
-    printCenteredAt("you must find the missing fragments by solving puzzles.", startY++, cyan);
+    printCenteredAt("you must find the missing fragments by solving puzzles.", startY++, green);
     startY++;
-    printCenteredAt(">> YOUR MISSION:", startY++, cyan);
-    printCenteredAt("* Solve mathematical challenges to restore balance", startY++, cyan);
+    printCenteredAt(">> YOUR MISSION:", startY++, red);
+    printCenteredAt("* Solve mathematical challenges to restore balance", startY++, green);
     printCenteredAt("* Collect stone fragments hidden throughout the realm", startY++, cyan);
-    printCenteredAt("* Face increasingly difficult puzzles as you progress", startY++, cyan);
-    printCenteredAt("* You have 3 lives - losing all means starting over!", startY++, cyan);
+    printCenteredAt("* Face increasingly difficult puzzles as you progress", startY++, green);
+    printCenteredAt("* You have 3 lives!", startY++, cyan);
     startY++;
-    printCenteredAt(">> SCORING:", startY++, cyan);
-    printCenteredAt("Easy Puzzles: 10 pts  |  Medium: 25 pts  |  Hard: 50 pts", startY++, cyan);
-    printCenteredAt("Speed Bonus: Answer quickly for up to +20 extra points!", startY++, cyan);
-    startY++;
-    printCenteredAt(">> TIP: The wisest weavers think before they act!", startY++, cyan);
+
+    printCenteredAt(">> TIP: The wisest weavers think before they act!", startY++, yellow);
 
     startY += 2;
-    printCenteredAt("Press ESC to return to menu...", startY, cyan);
+    printCenteredAt("Press ESC to return to menu...", startY, purple);
 
     while (true) {
         if (_kbhit()) {
