@@ -50,6 +50,7 @@ The game’s purpose is to develop quick calculation skills and logical thinking
 <b><a href="https://github.com/ITGeorgiev24">Ivaylo Georgiev (9b) - Scrum Trainer</b> 
 <br>
 Email: ITGeorgiev24@codingburgas.bg
+ 
 <b><a href="https://github.com/TSIvanov24">Toma Ivanov (9a) - Backend Developer</b> 
 <br>
 Email: TSIvanov24@codingburgas.bg
@@ -63,7 +64,7 @@ Email: DGBornusuzov24@codingburgas.bg
 Email: MPMarinov24@codingburgas.bg
 <h2 id="documentation">📁Documentation</h2>    
 <hr>
-<img src="https://github.com/user-attachments/assets/3ad0c148-6e5a-4e1b-ba16-82f53b41d500" width="30" alt="MS Word Logo"> <a href="">Documentation</a>
+<img src="https://github.com/user-attachments/assets/3ad0c148-6e5a-4e1b-ba16-82f53b41d500" width="30" alt="MS Word Logo"> <a href="https://codingburgas-my.sharepoint.com/:w:/g/personal/itgeorgiev24_codingburgas_bg/IQBa83B1XNi5SY7i4v3OQYcZAc7arfe25tc2ot0cevMtpng?rtime=1HUxicU13kg">Documentation</a>
 <br>
 <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Microsoft_PowerPoint_Logo.png" width="25" alt="MS PowerPoint Logo"> <a href="">Presentation</a>
 <br>
