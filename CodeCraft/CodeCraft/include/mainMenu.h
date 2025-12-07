@@ -11,10 +11,3 @@ void displayTitle(int startY);
 
 // Main menu
 void mainMenu();
-
-// Menu actions (implemented elsewhere)
-void displayMenu(int selectedOption);
-void showInstructions();
-void showHighScores();
-void showSettings();
-void startGame();
