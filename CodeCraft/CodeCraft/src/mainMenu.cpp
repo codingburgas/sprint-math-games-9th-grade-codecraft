@@ -41,21 +41,6 @@ void printCenteredAt(string text, int y, WORD color = 7) {
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
 }
 
-void drawDots() {
-    int width, height;
-    getConsoleSize(width, height);
-
-    WORD dim = FOREGROUND_BLUE;
-
-    for (int y = 0; y < height; y++) {
-        for (int x = 0; x < width; x += 4) {
-            setCursorPosition(x, y);
-            SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), dim);
-            cout << ".";
-        }
-    }
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
-}
 
 void displayTitle(int startY) {
     WORD cyan = FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY;
@@ -72,6 +57,14 @@ void displayTitle(int startY) {
 }
 
 void displayMenu(int selectedOption) {
+
+    WORD cyan = FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY;
+    WORD yellow = FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY;
+    WORD green = FOREGROUND_GREEN | FOREGROUND_INTENSITY;
+    WORD red = FOREGROUND_RED | FOREGROUND_INTENSITY;
+    WORD blue = FOREGROUND_BLUE | FOREGROUND_INTENSITY;
+    WORD purple = FOREGROUND_RED | FOREGROUND_BLUE | FOREGROUND_INTENSITY;
+
     clearScreen();
 
     int width, height;
@@ -85,11 +78,11 @@ void displayMenu(int selectedOption) {
     startY += 8;
 
     // Menu box
-    printCenteredAt("+==================================================+", startY++);
-    printCenteredAt("|                                                  |", startY++);
-    printCenteredAt("|          >>> M A I N   M E N U <<<               |", startY++);
-    printCenteredAt("|                                                  |", startY++);
-    printCenteredAt("+==================================================+", startY++);
+    printCenteredAt("+==================================================+", startY++, cyan);
+    printCenteredAt("|                                                  |", startY++, green);
+    printCenteredAt("|          >>> M A I N   M E N U <<<               |", startY++, yellow);
+    printCenteredAt("|                                                  |", startY++, green);
+    printCenteredAt("+==================================================+", startY++, cyan);
 
     string menuItems[] = {
         "Begin Your Quest",
@@ -111,15 +104,22 @@ void displayMenu(int selectedOption) {
         printCenteredAt(line, startY++);
     }
 
-    printCenteredAt("|                                                  |", startY++);
-    printCenteredAt("+==================================================+", startY++);
+    printCenteredAt("|                                                  |", startY++), yellow;
+    printCenteredAt("+==================================================+", startY++, cyan);
     startY += 2;
-    printCenteredAt("Use UP/DOWN arrows | ENTER to select | ESC to exit", startY);
+    printCenteredAt("Use UP/DOWN arrows | ENTER to select | ESC to exit", startY, purple);
 }
 
 void mainMenu() {
     int selectedOption = 0;
     bool running = true;
+
+    WORD cyan = FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY;
+    WORD yellow = FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY;
+    WORD green = FOREGROUND_GREEN | FOREGROUND_INTENSITY;
+    WORD red = FOREGROUND_RED | FOREGROUND_INTENSITY;
+    WORD blue = FOREGROUND_BLUE | FOREGROUND_INTENSITY;
+    WORD purple = FOREGROUND_RED | FOREGROUND_BLUE | FOREGROUND_INTENSITY;
 
     while (running) {
         displayMenu(selectedOption);
@@ -158,10 +158,10 @@ void mainMenu() {
                 int width, height;
                 getConsoleSize(width, height);
                 int y = height / 2;
-                printCenteredAt("+============================================================+", y++);
-                printCenteredAt("|   Thank you for saving Numeria, brave Number Weaver!     |", y++);
-                printCenteredAt("|   May the Great Equation Stone guide your path!          |", y++);
-                printCenteredAt("+============================================================+", y++);
+                printCenteredAt("+============================================================+", y++, cyan);
+                printCenteredAt("|   Thank you for saving Numeria, brave Number Weaver!     |", y++, yellow);
+                printCenteredAt("|   May the Great Equation Stone guide your path!          |", y++, green);
+                printCenteredAt("+============================================================+", y++, cyan);
                 Sleep(2000);
                 running = false;
                 break;
@@ -169,7 +169,6 @@ void mainMenu() {
         }
         else if (key == 27) { // ESC
             clearScreen();
-            drawDots();
 
             int width, height;
             getConsoleSize(width, height);
