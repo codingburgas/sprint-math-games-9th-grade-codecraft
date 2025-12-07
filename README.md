@@ -66,7 +66,7 @@ Email: MPMarinov24@codingburgas.bg
 <hr>
 <img src="https://github.com/user-attachments/assets/3ad0c148-6e5a-4e1b-ba16-82f53b41d500" width="30" alt="MS Word Logo"> <a href="https://codingburgas-my.sharepoint.com/:w:/g/personal/itgeorgiev24_codingburgas_bg/IQBa83B1XNi5SY7i4v3OQYcZAc7arfe25tc2ot0cevMtpng?rtime=1HUxicU13kg">Documentation</a>
 <br>
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Microsoft_PowerPoint_Logo.png" width="25" alt="MS PowerPoint Logo"> <a href="">Presentation</a>
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Microsoft_PowerPoint_Logo.png" width="25" alt="MS PowerPoint Logo"> <a href="https://codingburgas-my.sharepoint.com/:p:/g/personal/itgeorgiev24_codingburgas_bg/IQAynVeZqhQBRoY9Z0yl6FdeAaF3RruQtwW1P2FlFmuW_pQ?rtime=32r_vsg13kg">Presentation</a>
 <br>
 </p>
 <h2 id="download">🛠️ Download</h2>
