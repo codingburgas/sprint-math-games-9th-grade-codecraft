@@ -9,10 +9,12 @@ using namespace std;
 
 void sixthChapter(const string& playerName) {
 
-    WORD magenta = FOREGROUND_RED | FOREGROUND_BLUE | FOREGROUND_INTENSITY;
     WORD cyan = FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY;
     WORD yellow = FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY;
     WORD green = FOREGROUND_GREEN | FOREGROUND_INTENSITY;
+	WORD red = FOREGROUND_RED | FOREGROUND_INTENSITY;
+	WORD blue = FOREGROUND_BLUE | FOREGROUND_INTENSITY;
+	WORD purple = FOREGROUND_RED | FOREGROUND_BLUE | FOREGROUND_INTENSITY;
 
     clearScreen();
     int width, height;
@@ -25,7 +27,7 @@ void sixthChapter(const string& playerName) {
 
     // Chapter intro
     printCenteredAt("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", startY++, cyan);
-    printCenteredAt("[ CHAPTER 6: The Final Equation Gate ]", startY++, magenta);
+    printCenteredAt("[ CHAPTER 6: The Final Equation Gate ]", startY++, yellow);
     printCenteredAt("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", startY++, cyan);
     startY++;
 
@@ -33,7 +35,7 @@ void sixthChapter(const string& playerName) {
     printCenteredAt("The Final Gate towers ahead, sealed by a complex equation.", startY++, green);
     startY += 2;
 
-    printCenteredAt("Press enter to continue...", startY, yellow);
+    printCenteredAt("Press enter to continue...", startY, purple);
     _getch();
 
     // Puzzle screen
@@ -42,7 +44,7 @@ void sixthChapter(const string& playerName) {
     if (startY < 0) startY = 0;
 
     printCenteredAt("+==========================================================+", startY++, cyan);
-    printCenteredAt("|                   THE FINAL EQUATION GATE                |", startY++, magenta);
+    printCenteredAt("|                   THE FINAL EQUATION GATE                |", startY++, yellow);
     printCenteredAt("+==========================================================+", startY++, cyan);
     startY++;
 
@@ -51,11 +53,11 @@ void sixthChapter(const string& playerName) {
     startY += 2;
 
     printCenteredAt("+==========================================================+", startY++, cyan);
-    printCenteredAt("|                     SOLVE THE EQUATION                    |", startY++, magenta);
+    printCenteredAt("|                     SOLVE THE EQUATION                    |", startY++, yellow);
     printCenteredAt("+==========================================================+", startY++, cyan);
     startY++;
 
-    printCenteredAt("(8 + 4) * 2 - 6 = ___", startY++, yellow);
+    printCenteredAt("(8 + 4) * 2 - 6 = ___", startY++, blue);
     startY += 2;
 
     // Solve loop
@@ -65,7 +67,7 @@ void sixthChapter(const string& playerName) {
 
     while (!solved && attempts < 3) {
 
-        printCenteredAt("Enter your answer: ", startY, magenta);
+        printCenteredAt("Enter your answer: ", startY, purple);
         int inputX = (width + 19) / 2;
         setCursorPosition(inputX, startY);
 
@@ -80,7 +82,7 @@ void sixthChapter(const string& playerName) {
             printCenteredAt("A thunderous roar echoes as the seal breaks.", startY++, green);
             startY++;
 
-            printCenteredAt("[ (8 + 4) * 2 - 6 = 20 ]", startY++, yellow);
+            printCenteredAt("[ (8 + 4) * 2 - 6 = 20 ]", startY++, blue);
         }
         else {
             attempts++;
@@ -88,7 +90,7 @@ void sixthChapter(const string& playerName) {
 
             if (attempts < 3) {
                 printCenteredAt("The gate rejects your answer.", startY++, green);
-                printCenteredAt("(Attempts remaining: " + to_string(3 - attempts) + ")", startY++, magenta);
+                printCenteredAt("(Attempts remaining: " + to_string(3 - attempts) + ")", startY++, red);
                 startY++;
             }
             else {
@@ -99,7 +101,7 @@ void sixthChapter(const string& playerName) {
     }
 
     startY += 2;
-    printCenteredAt("Press enter to continue...", startY, yellow);
+    printCenteredAt("Press enter to continue...", startY, purple);
     _getch();
 
     // Stone discovery
@@ -108,7 +110,7 @@ void sixthChapter(const string& playerName) {
     if (startY < 0) startY = 0;
 
     printCenteredAt("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", startY++, cyan);
-    printCenteredAt("[ The Core of Numeria ]", startY++, magenta);
+	printCenteredAt("[ The Core of Numeria ]", startY++, yellow);
     printCenteredAt("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", startY++, cyan);
     startY++;
 
@@ -125,7 +127,7 @@ void sixthChapter(const string& playerName) {
     if (startY < 0) startY = 0;
 
     printCenteredAt("+==========================================================+", startY++, cyan);
-    printCenteredAt("|         *** FINAL EQUATION STONE COMPLETED ***           |", startY++, magenta);
+	printCenteredAt("|         *** FINAL EQUATION STONE COMPLETED ***           |", startY++, yellow);
     printCenteredAt("+==========================================================+", startY++, cyan);
     startY += 2;
 
@@ -135,15 +137,15 @@ void sixthChapter(const string& playerName) {
     displayStoneProgress(startY);
     startY += 3;
 
-    printCenteredAt("[ Chapter 6 Complete! ]", startY++, yellow);
+    printCenteredAt("[ Chapter 6 Complete! ]", startY++, green);
     startY += 2;
 
-    printCenteredAt("THE END", startY++, magenta);
-    printCenteredAt("You completed all chapters!", startY++, yellow);
-    printCenteredAt("Your journey in NUMERIA ended successfully!", startY++, cyan);
+	printCenteredAt("THE END", startY++, red);
+	printCenteredAt("You completed all chapters!", startY++, green);
+    printCenteredAt("Your journey in NUMERIA ended successfully!", startY++, green);
     startY += 2;
 
-    printCenteredAt("Press ESC to return to menu...", startY, magenta);
+	printCenteredAt("Press ESC to return to menu...", startY, purple);
 
     while (true) {
         if (_kbhit()) {

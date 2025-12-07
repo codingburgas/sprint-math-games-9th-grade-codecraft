@@ -14,6 +14,8 @@ void fourthChapter(const string& playerName) {
     WORD cyan = FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY;
     WORD green = FOREGROUND_GREEN | FOREGROUND_INTENSITY;
     WORD purple = FOREGROUND_RED | FOREGROUND_BLUE | FOREGROUND_INTENSITY;
+	WORD blue = FOREGROUND_BLUE | FOREGROUND_INTENSITY;
+	WORD red = FOREGROUND_RED | FOREGROUND_INTENSITY;
 
     clearScreen();
     int width, height;
@@ -56,7 +58,7 @@ void fourthChapter(const string& playerName) {
     printCenteredAt("+==========================================================+", startY++, cyan);
     startY++;
 
-    printCenteredAt("7 * 5 = ___", startY++, yellow);
+    printCenteredAt("7 * 5 = ___", startY++, blue);
     startY += 2;
 
     // Solve loop
@@ -81,7 +83,7 @@ void fourthChapter(const string& playerName) {
             printCenteredAt("The mountain trembles and the path solidifies.", startY++, green);
             startY++;
 
-            printCenteredAt("[ 7 * 5 = 35 ]", startY++, yellow);
+            printCenteredAt("[ 7 * 5 = 35 ]", startY++, blue);
         }
         else {
             attempts++;
@@ -89,7 +91,7 @@ void fourthChapter(const string& playerName) {
 
             if (attempts < 3) {
                 printCenteredAt("The numbers shift... Incorrect.", startY++, green);
-                printCenteredAt("(Attempts remaining: " + to_string(3 - attempts) + ")", startY++, purple);
+                printCenteredAt("(Attempts remaining: " + to_string(3 - attempts) + ")", startY++, red);
                 startY++;
             }
             else {

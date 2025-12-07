@@ -29,13 +29,13 @@ void secondChapter(const string& playerName) {
 
     // Chapter Introduction
     printCenteredAt("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", startY++, cyan);
-    printCenteredAt("[ CHAPTER 2: The Bridge of Balance ]", startY++, green);
+    printCenteredAt("[ CHAPTER 2: The Bridge of Balance ]", startY++, yellow);
     printCenteredAt("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", startY++, cyan);
     startY++;
-    printCenteredAt("A rushing river blocks your path.", startY++, red);
-    printCenteredAt("An unstable bridge flickers ahead.", startY++, yellow);
+    printCenteredAt("A rushing river blocks your path.", startY++, green);
+    printCenteredAt("An unstable bridge flickers ahead.", startY++, green);
     startY += 2;
-    printCenteredAt("Press enter to continue...", startY, green);
+    printCenteredAt("Press enter to continue...", startY, purple);
     _getch();
 
     // The Scales Puzzle
@@ -44,10 +44,10 @@ void secondChapter(const string& playerName) {
     if (startY < 0) startY = 0;
 
     printCenteredAt("+==========================================================+", startY++, cyan);
-    printCenteredAt("|                 THE SCALES OF EQUALITY                   |", startY++, green);
+    printCenteredAt("|                 THE SCALES OF EQUALITY                   |", startY++, yellow);
     printCenteredAt("+==========================================================+", startY++, cyan);
     startY++;
-    printCenteredAt("Two massive golden scales hover at the bridge's center.", startY++, red);
+    printCenteredAt("Two massive golden scales hover at the bridge's center.", startY++, green);
     startY += 2;
 
     // Display the puzzle
@@ -64,7 +64,7 @@ void secondChapter(const string& playerName) {
     bool solved = false;
 
     while (!solved && attempts < 3) {
-        printCenteredAt("Enter your answer: ", startY, green);
+        printCenteredAt("Enter your answer: ", startY, purple);
         int inputX = (width + 19) / 2;
         setCursorPosition(inputX, startY);
 
@@ -76,7 +76,7 @@ void secondChapter(const string& playerName) {
             startY += 2;
             printCenteredAt("*** PERFECT BALANCE! ***", startY++, green);
             startY++;
-            printCenteredAt("The bridge solidifies with golden light!", startY++, yellow);
+            printCenteredAt("The bridge solidifies with golden light!", startY++, green);
             startY++;
 
             printCenteredAt("[ 4 * 3 = 6 + 6 = 12 ]", startY++, blue);
@@ -85,7 +85,7 @@ void secondChapter(const string& playerName) {
             attempts++;
             startY += 2;
             if (attempts < 3) {
-                printCenteredAt("The scales shudder... Try again.", startY++, red);
+                printCenteredAt("The scales shudder... Try again.", startY++, green);
                 printCenteredAt("(Attempts remaining: " + to_string(3 - attempts) + ")", startY++, red);
                 startY++;
             }
@@ -97,7 +97,7 @@ void secondChapter(const string& playerName) {
     }
 
     startY += 2;
-    printCenteredAt("Press enter to cross...", startY, blue);
+    printCenteredAt("Press enter to cross...", startY, purple);
     _getch();
 
     // Finding the Stone
@@ -106,7 +106,7 @@ void secondChapter(const string& playerName) {
     if (startY < 0) startY = 0;
 
     printCenteredAt("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", startY++, cyan);
-    printCenteredAt("[ The Far Side ]", startY++, purple);
+    printCenteredAt("[ The Far Side ]", startY++, yellow);
     printCenteredAt("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", startY++, cyan);
     startY++;
 
@@ -135,7 +135,7 @@ void secondChapter(const string& playerName) {
 
     printCenteredAt("[ Chapter 2 Complete! ]", startY++, green);
     startY += 2;
-    printCenteredAt("Press enter to continue your journey...", startY, blue);
+    printCenteredAt("Press enter to continue your journey...", startY, purple);
     _getch();
 
     thirdChapter(playerName);

@@ -13,6 +13,8 @@ void thirdChapter(const string& playerName) {
     WORD cyan = FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY;
     WORD yellow = FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY;
     WORD purple = FOREGROUND_RED | FOREGROUND_BLUE | FOREGROUND_INTENSITY;
+	WORD blue = FOREGROUND_BLUE | FOREGROUND_INTENSITY;
+	WORD red = FOREGROUND_RED | FOREGROUND_INTENSITY;   
 
     clearScreen();
     int width, height;
@@ -55,7 +57,7 @@ void thirdChapter(const string& playerName) {
     printCenteredAt("+==========================================================+", startY++, cyan);
     startY++;
 
-    printCenteredAt("1/2 + 1/4 = ___", startY++, yellow);
+    printCenteredAt("1/2 + 1/4 = ___", startY++, blue);
     startY += 2;
 
     // Solve loop
@@ -75,12 +77,12 @@ void thirdChapter(const string& playerName) {
         if (answer == 0.75) {
             solved = true;
             startY += 2;
-            printCenteredAt("*** THE FLOW RETURNS TO BALANCE! ***", startY++, cyan);
+            printCenteredAt("*** THE FLOW RETURNS TO BALANCE! ***", startY++, red);
             startY++;
             printCenteredAt("The altar glows brightly, illuminating the forest.", startY++, green);
             startY++;
 
-            printCenteredAt("[ 1/2 + 1/4 = 0.75 ]", startY++, yellow);
+            printCenteredAt("[ 1/2 + 1/4 = 0.75 ]", startY++, blue);
         }
         else {
             attempts++;
@@ -88,7 +90,7 @@ void thirdChapter(const string& playerName) {
 
             if (attempts < 3) {
                 printCenteredAt("The symbols distort... Incorrect.", startY++, green);
-                printCenteredAt("(Attempts remaining: " + to_string(3 - attempts) + ")", startY++, purple);
+                printCenteredAt("(Attempts remaining: " + to_string(3 - attempts) + ")", startY++, red);
                 startY++;
             }
             else {
